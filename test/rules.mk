@@ -13,6 +13,10 @@
 # limitations under the License.
 #
 
+ifeq (true,$(call TOBOOL,$(CONFIRMATIONUI_DISABLED)))
+$(error Trying to build tests for DISABLED confirmationui)
+endif
+
 LOCAL_DIR := $(GET_LOCAL_DIR)
 
 MODULE := $(LOCAL_DIR)
