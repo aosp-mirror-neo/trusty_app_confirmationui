@@ -13,5 +13,7 @@
 # limitations under the License.
 #
 
+ifeq (false,$(call TOBOOL,$(CONFIRMATIONUI_DISABLED)))
 TRUSTY_USER_TESTS += \
-	trusty/user/app/confirmationui/test \
+	trusty/user/app/confirmationui/test
+endif
