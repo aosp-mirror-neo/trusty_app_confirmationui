@@ -12,6 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+ifeq (true,$(call TOBOOL,$(CONFIRMATIONUI_DISABLED)))
+$(error Trying to build DISABLED confirmationui)
+endif
+
 LOCAL_DIR := $(GET_LOCAL_DIR)
 
 MODULE := $(LOCAL_DIR)
