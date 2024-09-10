@@ -180,7 +180,7 @@ err:
 static int handle_msg(handle_t chan, uint32_t req_len, struct chan_ctx* ctx) {
     int rc;
     uint8_t msg[CONFIRMATIONUI_MAX_MSG_SIZE];
-    uint32_t resp_len = sizeof(msg);
+    uint32_t resp_len = ctx->shm_len;
     struct confirmationui_hdr hdr;
     struct confirmationui_msg_args args;
 
